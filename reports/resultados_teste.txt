@@ -1,0 +1,8 @@
+Acurácia: 0.8715
+Precisão: 0.8736
+Recall (Sensibilidade): 0.8976
+F1-Score: 0.8854
+ROC-AUC: 0.9314
+Matriz de Confusão:
+[[344  66]
+ [ 52 456]]

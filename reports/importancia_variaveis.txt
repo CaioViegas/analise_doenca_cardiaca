@@ -1,0 +1,49 @@
+Análise de Feature Importance
+
+1. Logistic Regression Coefficients:
+   - InclinacaoST_Plana: 2.433624
+   - Sexo: 1.356757
+   - TipoDorTorax_Assintomático: 1.023084
+   - AnginaExercicio: 0.991506
+   - GlicemiaJejum: 0.975785
+   - InclinacaoST_Descendente: 0.912385
+   - DepressaoST: 0.343584
+   - Idade: 0.013822
+   - PressaoSanguineaRepouso: 0.003766
+   - Colesterol: -0.004854
+   - FrequenciaCardiacaMaxima: -0.007502
+   - EletrocardiogramaRepouso_Normal: -0.180878
+   - TipoDorTorax_DorNaoAnginosa: -0.387469
+   - TipoDorTorax_AnginaTípica: -0.668723
+
+2. Permutation Importance:
+   - InclinacaoST_Plana: 0.086956
+   - TipoDorTorax_Assintomático: 0.028149
+   - Sexo: 0.019747
+   - GlicemiaJejum: 0.013008
+   - DepressaoST: 0.012743
+   - AnginaExercicio: 0.007836
+   - Colesterol: 0.004641
+   - TipoDorTorax_DorNaoAnginosa: 0.004147
+   - TipoDorTorax_AnginaTípica: 0.003725
+   - InclinacaoST_Descendente: 0.002773
+   - Idade: 0.000096
+   - PressaoSanguineaRepouso: -0.000398
+   - EletrocardiogramaRepouso_Normal: -0.001640
+   - FrequenciaCardiacaMaxima: -0.002013
+
+3. Correlação por Classe:
+   - Idade: Class 0: 0.102151, Class 1: 0.075819
+   - Sexo: Class 0: 0.065102, Class 1: 0.040227
+   - PressaoSanguineaRepouso: Class 0: 0.096968, Class 1: 0.104846
+   - Colesterol: Class 0: 0.066944, Class 1: 0.089537
+   - GlicemiaJejum: Class 0: 0.106778, Class 1: 0.033865
+   - FrequenciaCardiacaMaxima: Class 0: 0.021216, Class 1: 0.010641
+   - AnginaExercicio: Class 0: 0.116132, Class 1: 0.105927
+   - DepressaoST: Class 0: 0.153772, Class 1: 0.126185
+   - TipoDorTorax_AnginaTípica: Class 0: -0.045004, Class 1: 0.030527
+   - TipoDorTorax_Assintomático: Class 0: 0.029972, Class 1: 0.001985
+   - TipoDorTorax_DorNaoAnginosa: Class 0: 0.016770, Class 1: 0.001494
+   - EletrocardiogramaRepouso_Normal: Class 0: 0.034035, Class 1: 0.021467
+   - InclinacaoST_Descendente: Class 0: 0.103198, Class 1: 0.058114
+   - InclinacaoST_Plana: Class 0: 0.099735, Class 1: 0.030269

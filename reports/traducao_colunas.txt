@@ -1,0 +1,12 @@
+Age:Idade
+Sex:Sexo
+ChestPainType:TipoDorTorax
+RestingBP:PressaoSanguineaRepouso
+Cholesterol:Colesterol
+FastingBS:GlicemiaJejum
+RestingECG:EletrocardiogramaRepouso
+MaxHR:FrequenciaCardiacaMaxima
+ExerciseAngina:AnginaExercicio
+Oldpeak:DepressaoST
+ST_Slope:InclinacaoST
+HeartDisease:DoencaCardiaca

@@ -1,0 +1,14 @@
+Sexo:M:Masculino
+Sexo:F:Feminino
+TipoDorTorax:ATA:AnginaTípica
+TipoDorTorax:NAP:DorNaoAnginosa
+TipoDorTorax:ASY:Assintomático
+TipoDorTorax:TA:AnginaAtípica
+EletrocardiogramaRepouso:Normal:Normal
+EletrocardiogramaRepouso:ST:HipertrofiaVentricularEsquerda
+EletrocardiogramaRepouso:LVH:HipertrofiaVentricularEsquerda
+AnginaExercicio:N:Nao
+AnginaExercicio:Y:Sim
+InclinacaoST:Up:Ascendente
+InclinacaoST:Flat:Plana
+InclinacaoST:Down:Descendente

@@ -1,0 +1,64 @@
+Análise de Desempenho de Modelos com Diferentes Scalers
+
+Este relatório apresenta o desempenho de vários modelos de machine learning utilizando diferentes métodos de escalonamento (scalers).
+
+1. Logistic Regression:
+   - MaxAbsScaler: Acurácia = 0.893333, Precisão = 0.894756, Recall = 0.893333, F1-score = 0.893409, ROC-AUC = 0.962738, Matriz de Confusão = [[65, 6], [10, 69]]
+   - MinMaxScaler: Acurácia = 0.893333, Precisão = 0.894756, Recall = 0.893333, F1-score = 0.893409, ROC-AUC = 0.963095, Matriz de Confusão = [[65, 6], [10, 69]]
+   - RobustScaler: Acurácia = 0.906667, Precisão = 0.908089, Recall = 0.906667, F1-score = 0.906733, ROC-AUC = 0.96773, Matriz de Confusão = [[66, 5], [9, 70]]
+   - StandardScaler: Acurácia = 0.906667, Precisão = 0.908089, Recall = 0.906667, F1-score = 0.906733, ROC-AUC = 0.964343, Matriz de Confusão = [[66, 5], [9, 70]]
+
+   Observação: O Logistic Regression teve o melhor desempenho com RobustScaler e StandardScaler, atingindo uma acurácia de 0.906667. Esses scalers parecem ser mais adequados para este modelo.
+
+2. DecisionTreeRegressor:
+   - MaxAbsScaler: Acurácia = 0.806667, Precisão = 0.821311, Recall = 0.806667, F1-score = 0.805762, ROC-AUC = 0.811464, Matriz de Confusão = [[64, 7], [22, 57]]
+   - MinMaxScaler: Acurácia = 0.826667, Precisão = 0.840012, Recall = 0.826667, F1-score = 0.826019, ROC-AUC = 0.831164, Matriz de Confusão = [[65, 6], [20, 59]]
+   - RobustScaler: Acurácia = 0.786667, Precisão = 0.806604, Recall = 0.786667, F1-score = 0.784952, ROC-AUC = 0.792476, Matriz de Confusão = [[64, 7], [25, 54]]
+   - StandardScaler: Acurácia = 0.806667, Precisão = 0.821311, Recall = 0.806667, F1-score = 0.805762, ROC-AUC = 0.811464, Matriz de Confusão = [[64, 7], [22, 57]]
+
+   Observação: O DecisionTreeRegressor teve um desempenho inferior em comparação com outros modelos, com o melhor resultado usando MinMaxScaler (acurácia de 0.826667). Árvores de decisão geralmente não são sensíveis à escala dos dados, o que explica a menor variação no desempenho entre os scalers.
+
+3. RandomForest:
+   - MaxAbsScaler: Acurácia = 0.9, Precisão = 0.903989, Recall = 0.9, F1-score = 0.900031, ROC-AUC = 0.962917, Matriz de Confusão = [[67, 4], [11, 68]]
+   - MinMaxScaler: Acurácia = 0.893333, Precisão = 0.89843, Recall = 0.893333, F1-score = 0.893333, ROC-AUC = 0.961758, Matriz de Confusão = [[67, 4], [12, 67]]
+   - RobustScaler: Acurácia = 0.886667, Precisão = 0.890605, Recall = 0.886667, F1-score = 0.886702, ROC-AUC = 0.955785, Matriz de Confusão = [[66, 5], [12, 67]]
+   - StandardScaler: Acurácia = 0.9, Precisão = 0.903989, Recall = 0.9, F1-score = 0.900031, ROC-AUC = 0.956053, Matriz de Confusão = [[67, 4], [11, 68]]
+
+   Observação: O RandomForest teve um desempenho consistente, com o melhor resultado usando MaxAbsScaler e StandardScaler (acurácia de 0.9). Esse modelo é robusto e menos sensível à escolha do scaler.
+
+4. GradientBoosting:
+   - MaxAbsScaler: Acurácia = 0.88, Precisão = 0.887658, Recall = 0.88, F1-score = 0.879893, ROC-AUC = 0.960777, Matriz de Confusão = [[67, 4], [14, 65]]
+   - MinMaxScaler: Acurácia = 0.88, Precisão = 0.887658, Recall = 0.88, F1-score = 0.879893, ROC-AUC = 0.960777, Matriz de Confusão = [[67, 4], [14, 65]]
+   - RobustScaler: Acurácia = 0.88, Precisão = 0.887658, Recall = 0.88, F1-score = 0.879893, ROC-AUC = 0.960777, Matriz de Confusão = [[67, 4], [14, 65]]
+   - StandardScaler: Acurácia = 0.88, Precisão = 0.887658, Recall = 0.88, F1-score = 0.879893, ROC-AUC = 0.960777, Matriz de Confusão = [[67, 4], [14, 65]]
+
+   Observação: O GradientBoosting teve um desempenho estável, com acurácia de 0.88 para todos os scalers. Isso sugere que o modelo é pouco afetado pela escolha do método de escalonamento.
+
+5. AdaBoostRegressor:
+   - MaxAbsScaler: Acurácia = 0.886667, Precisão = 0.888789, Recall = 0.886667, F1-score = 0.886742, ROC-AUC = 0.960866, Matriz de Confusão = [[65, 6], [11, 68]]
+   - MinMaxScaler: Acurácia = 0.886667, Precisão = 0.888789, Recall = 0.886667, F1-score = 0.886742, ROC-AUC = 0.960866, Matriz de Confusão = [[65, 6], [11, 68]]
+   - RobustScaler: Acurácia = 0.886667, Precisão = 0.888789, Recall = 0.886667, F1-score = 0.886742, ROC-AUC = 0.960866, Matriz de Confusão = [[65, 6], [11, 68]]
+   - StandardScaler: Acurácia = 0.886667, Precisão = 0.888789, Recall = 0.886667, F1-score = 0.886742, ROC-AUC = 0.960866, Matriz de Confusão = [[65, 6], [11, 68]]
+
+   Observação: O AdaBoostRegressor também apresentou desempenho consistente, com acurácia de 0.886667 para todos os scalers. Isso indica que o modelo não é sensível à escolha do método de escalonamento.
+
+6. XGBRegressor:
+   - MaxAbsScaler: Acurácia = 0.88, Precisão = 0.887658, Recall = 0.88, F1-score = 0.879893, ROC-AUC = 0.948297, Matriz de Confusão = [[67, 4], [14, 65]]
+   - MinMaxScaler: Acurácia = 0.88, Precisão = 0.887658, Recall = 0.88, F1-score = 0.879893, ROC-AUC = 0.948297, Matriz de Confusão = [[67, 4], [14, 65]]
+   - RobustScaler: Acurácia = 0.88, Precisão = 0.887658, Recall = 0.88, F1-score = 0.879893, ROC-AUC = 0.948297, Matriz de Confusão = [[67, 4], [14, 65]]
+   - StandardScaler: Acurácia = 0.88, Precisão = 0.887658, Recall = 0.88, F1-score = 0.879893, ROC-AUC = 0.948297, Matriz de Confusão = [[67, 4], [14, 65]]
+
+   Observação: O XGBRegressor teve um desempenho estável, com acurácia de 0.88 para todos os scalers. Assim como outros modelos baseados em árvores, ele não é sensível à escolha do scaler.
+
+7. Gaussian:
+   - MaxAbsScaler: Acurácia = 0.86, Precisão = 0.860875, Recall = 0.86, F1-score = 0.860093, ROC-AUC = 0.931895, Matriz de Confusão = [[62, 9], [12, 67]]
+   - MinMaxScaler: Acurácia = 0.86, Precisão = 0.860875, Recall = 0.86, F1-score = 0.860093, ROC-AUC = 0.931895, Matriz de Confusão = [[62, 9], [12, 67]]
+   - RobustScaler: Acurácia = 0.86, Precisão = 0.860875, Recall = 0.86, F1-score = 0.860093, ROC-AUC = 0.931895, Matriz de Confusão = [[62, 9], [12, 67]]
+   - StandardScaler: Acurácia = 0.86, Precisão = 0.860875, Recall = 0.86, F1-score = 0.860093, ROC-AUC = 0.931895, Matriz de Confusão = [[62, 9], [12, 67]]
+
+   Observação: O modelo Gaussian teve um desempenho inferior em comparação com outros modelos, com acurácia de 0.86 para todos os scalers. Isso pode indicar que o modelo não é adequado para este conjunto de dados.
+
+Conclusão:
+- O Logistic Regression com RobustScaler ou StandardScaler teve o melhor desempenho geral (acurácia de 0.906667).
+- Modelos baseados em árvores, como RandomForest, GradientBoosting e XGBRegressor, tiveram desempenho estável e pouco afetado pela escolha do scaler.
+- O DecisionTreeRegressor e o Gaussian tiveram desempenho inferior, sugerindo que podem não ser os modelos mais adequados para este problema.

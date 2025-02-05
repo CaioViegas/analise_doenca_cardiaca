@@ -1,0 +1,117 @@
+1. Análise Descritiva das Variáveis Numéricas
+
+Idade: A média de idade é de 52.88 anos, com um desvio padrão de 9.51 anos. A distribuição é levemente assimétrica à esquerda (skewness = -0.1029) e possui curtose negativa (-0.3874), indicando uma distribuição mais achatada que a normal.
+
+PressaoSanguineaRepouso: A média da pressão sanguínea em repouso é de 133.02 mmHg, com um desvio padrão de 17.28 mmHg. A distribuição é assimétrica à direita (skewness = 0.6201) e possui curtose positiva (0.7428), indicando uma cauda mais pesada à direita.
+
+Colesterol: A média de colesterol é de 244.64 mg/dL, com um desvio padrão de 59.15 mg/dL. A distribuição é altamente assimétrica à direita (skewness = 1.2385) e possui curtose positiva (4.5286), indicando a presença de outliers.
+
+FrequenciaCardiacaMaxima: A média da frequência cardíaca máxima é de 140.23 bpm, com um desvio padrão de 24.52 bpm. A distribuição é levemente assimétrica à esquerda (skewness = -0.1652) e possui curtose negativa (-0.5524).
+
+DepressaoST: A média da depressão do segmento ST é de 0.9016, com um desvio padrão de 1.0729. A distribuição é altamente assimétrica à direita (skewness = 1.2194) e possui curtose positiva (1.3621), indicando a presença de outliers.
+
+2. Identificação de Outliers
+Foram identificados outliers utilizando dois métodos: Z-Score e IQR (Intervalo Interquartil).
+
+Método Z-Score (Z-Score > 3):
+- Idade: 0 outliers.
+- PressaoSanguineaRepouso: 5 outliers.
+- Colesterol: 8 outliers.
+- FrequenciaCardiacaMaxima: 0 outliers.
+- DepressaoST: 6 outliers.
+
+Método IQR:
+- Idade: 0 outliers.
+- PressaoSanguineaRepouso: 20 outliers.
+- Colesterol: 23 outliers.
+- FrequenciaCardiacaMaxima: 0 outliers.
+- DepressaoST: 15 outliers.
+
+3. Análise de Correlação
+
+A matriz de correlação mostra a relação entre as variáveis numéricas do dataset. Algumas das principais correlações identificadas são:
+
+- Idade e DoencaCardiaca: Correlação positiva moderada (0.299), indicando que indivíduos mais velhos tendem a ter maior probabilidade de desenvolver doença cardíaca.
+- FrequenciaCardiacaMaxima e DoencaCardiaca: Correlação negativa (-0.377), sugerindo que pessoas com doença cardíaca tendem a ter uma menor frequência cardíaca máxima.
+- DepressaoST e DoencaCardiaca: Correlação positiva moderada (0.496), indicando que maiores valores de depressão do segmento ST estão associados à presença de doença cardíaca.
+- AnginaExercicio e DoencaCardiaca: Correlação positiva (0.440), mostrando que a presença de angina induzida por exercício está relacionada a uma maior probabilidade de doença cardíaca.
+- TipoDorTorax_Assintomático e DoencaCardiaca: Correlação positiva moderada (0.523), sugerindo que pacientes com dor torácica assintomática têm maior probabilidade de doença cardíaca.
+- TipoDorTorax_AnginaTípica e DoencaCardiaca: Correlação negativa moderada (-0.376), indicando que indivíduos com angina típica têm menor probabilidade de desenvolver a doença.
+- InclinacaoST_Plana e DoencaCardiaca: Correlação positiva alta (0.592), sugerindo que uma inclinação plana do segmento ST está fortemente associada à presença de doença cardíaca.
+
+4. Análise Descritiva por Grupo (DoencaCardiaca)
+Foram realizadas análises descritivas comparando as médias e medianas das variáveis numéricas entre os grupos com e sem doença cardíaca. Os resultados dos testes t indicam que há diferenças significativas entre os grupos para todas as variáveis analisadas:
+
+- Idade: Média de 50.17 (sem doença) vs. 55.85 (com doença), p-valor < 0.0001.
+- PressaoSanguineaRepouso: Média de 130.16 (sem doença) vs. 136.15 (com doença), p-valor < 0.0001.
+- Colesterol: Média de 238.77 (sem doença) vs. 251.06 (com doença), p-valor = 0.0045.
+- FrequenciaCardiacaMaxima: Média de 149.06 (sem doença) vs. 130.55 (com doença), p-valor < 0.0001.
+- DepressaoST: Média de 0.39 (sem doença) vs. 1.46 (com doença), p-valor < 0.0001.
+
+Conclusão: Todas as variáveis analisadas apresentam diferenças significativas entre os grupos com e sem doença cardíaca, sugerindo que essas variáveis podem ser preditores importantes para a presença de doença cardíaca.
+
+5. Testes de Associação (Qui-Quadrado)
+Foram realizados testes de Qui-Quadrado para avaliar a associação entre variáveis categóricas e a presença de doença cardíaca. Todos os testes indicaram associações significativas:
+
+- Sexo e DoencaCardiaca: Estatística = 62.59, p-valor < 0.0001.
+- TipoDorTorax e DoencaCardiaca: Estatística = 215.19, p-valor < 0.0001.
+- EletrocardiogramaRepouso e DoencaCardiaca: Estatística = 12.71, p-valor = 0.0004.
+- AnginaExercicio e DoencaCardiaca: Estatística = 224.91, p-valor < 0.0001.
+- InclinacaoST e DoencaCardiaca: Estatística = 319.14, p-valor < 0.0001.
+
+Conclusão: Todas as variáveis categóricas analisadas estão significativamente associadas à presença de doença cardíaca, reforçando a importância dessas variáveis no modelo preditivo.
+
+Complete a parte de análise de correlação.
+
+6. Gráfico de Correlações Numéricas
+
+Distribuição de Idade
+- Pacientes com doença cardíaca tendem a ser mais velhos, com pico em torno dos 55 a 65 anos.
+- Pacientes sem doença cardíaca apresentam uma distribuição um pouco mais ampla, com pico na faixa dos 45 a 55 anos.
+
+Distribuição da Pressão Sanguínea em Repouso
+- Ambos os grupos têm uma distribuição semelhante, com maior concentração entre 120 e 140 mmHg.
+- Pequenas diferenças podem ser observadas, mas não há uma distinção clara entre os grupos.
+
+Distribuição do Colesterol
+- As distribuições de colesterol são bastante semelhantes para ambos os grupos.
+- Há alguns valores mais elevados, possivelmente outliers, indicando pacientes com níveis muito altos.
+
+Distribuição da Frequência Cardíaca Máxima
+- Pacientes com doença cardíaca tendem a ter frequências cardíacas máximas mais baixas (em torno de 120-140).
+- Pacientes sem doença cardíaca apresentam valores mais elevados, chegando até 160 ou mais.
+
+Distribuição da DepressãoST
+- A maioria dos pacientes apresenta valores baixos de depressão ST (~0), mas pacientes com doença cardíaca possuem uma maior distribuição de valores mais altos.
+
+Idade e Frequência Cardíaca Máxima parecem ser bons indicadores para diferenciar pacientes com e sem doença cardíaca.
+Pressão Sanguínea em Repouso e Colesterol não apresentam uma distinção clara.
+Depressão ST tem valores ligeiramente mais elevados para quem tem doença cardíaca.
+
+7. Análise das Distribuições Categóricas
+
+Distribuição de Sexo
+- A maioria dos pacientes com doença cardíaca são do sexo masculino.
+- O número de mulheres com doença cardíaca é significativamente menor em comparação aos homens.
+- Isso sugere que o sexo pode ser um fator importante na presença da doença cardíaca.
+
+Distribuição do Tipo de Dor Torácica
+- A dor do tipo assintomática está muito mais associada a pacientes com doença cardíaca.
+- Outros tipos de dor torácica (como angina típica e atípica) estão mais presentes nos pacientes sem doença cardíaca.
+
+Distribuição do Eletrocardiograma em Repouso
+- Pacientes com eletrocardiograma normal são maioria entre os que não têm doença cardíaca.
+- Hipertrofia ventricular esquerda está mais associada a quem tem doença cardíaca.
+
+Distribuição de Angina Induzida por Exercício
+- A maioria dos pacientes sem doença cardíaca não apresentou angina ao exercício.
+- Entre os pacientes com doença cardíaca, há um número considerável que teve angina induzida pelo esforço.
+
+Distribuição da Inclinação do Segmento ST
+- Pacientes com doença cardíaca apresentam maior ocorrência de um padrão de inclinação plana.
+- A inclinação ascendente está mais presente em pacientes sem doença cardíaca.
+- A inclinação descendente é mais comum em pacientes com doença cardíaca, mas aparece em menor quantidade.
+
+Sexo, Tipo de Dor Torácica e Inclinação ST parecem ser bons indicadores para distinguir pacientes com e sem doença cardíaca.
+Angina Induzida por Exercício também tem uma diferença notável entre os grupos.
+Eletrocardiograma em Repouso apresenta algumas diferenças, mas menos significativas.
